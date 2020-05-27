@@ -16,11 +16,13 @@
 
 Separate your pdfs from your tex files
 
-## Structure/Commands
+## Structures
 
 ⚠️ All commands should be ran from the top of your LaTeX project ⚠️
 
 ### `texsep mirror`
+
+See `texsep mirror --help` for more information
 
 #### Initial Structure
 
@@ -77,4 +79,71 @@ Structure after the command runs
     └── Computational-Theory/
         ├── parallel-computing.pdf
         └── microprocessors.pdf
+```
+
+### `texsep folders`
+
+See `texsep folders --help` for more information
+
+#### Initial Structure
+
+Structure before the command runs
+
+```
+├── Physics/
+│   ├── string-theory.tex
+│   ├── string-theory.pdf
+│   ├── projectile-motion.tex
+│   └── projectile-motion.pdf
+│
+├── Math/
+│   ├── combinatorics.tex
+│   ├── combinatorics.pdf
+│   ├── ray-tracing.tex
+│   └── ray-tracing.pdf
+│
+├── Computational-Theory/
+│   ├── parallel-computing.tex
+│   ├── parallel-computing.pdf
+│   ├── microprocessors.tex
+│   └── microprocessors.pdf
+│
+├── random.tex
+└── random.pdf
+```
+
+#### Post Structure
+
+Structure after the command runs
+
+```
+├── Physics/
+│   ├── TeX/
+│   │   ├── string-theory.tex
+│   │   └── projectile-motion.tex
+│   └── PDF/
+│       ├── string-theory.pdf
+│       └── projectile-motion.pdf
+│
+├── Math/
+│   ├── TeX/
+│   │   ├── combinatorics.tex
+│   │   └── ray-tracing.tex
+│   └── PDF/
+│       ├── combinatorics.pdf
+│       └── ray-tracing.pdf
+│
+├── Computational-Theory/
+│   ├── TeX/
+│   │   ├── parallel-computing.tex
+│   │   └── parallel-computing.pdf
+│   └── PDF/
+│       ├── microprocessors.tex
+│       └── microprocessors.pdf
+│
+├── TeX/
+│   └── random.tex
+│
+└── PDF/
+    └── random.pdf
 ```
