@@ -14,3 +14,7 @@ var pdfFolderCmd = &cobra.Command{
 		fmt.Println("localize called")
 	},
 }
+
+func init() {
+	rootCmd.AddCommand(pdfFolderCmd)
+}

@@ -25,7 +25,7 @@ Separate your pdfs from your tex files
  \/__\:\  \      \:\/:/  /       |:|  |       \/_/:/  /     \:\/:/  /     \:\  \
       \:\__\      \::/  /        |:|__|         /:/  /       \::/  /       \:\__\
        \/__/       \/__/         |/__/          \/__/         \/__/         \/__/
-`,
+	`,
 }
 
 // Execute ... Excute the main command

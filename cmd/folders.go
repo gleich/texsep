@@ -14,3 +14,7 @@ var foldersCmd = &cobra.Command{
 		fmt.Println("folders called")
 	},
 }
+
+func init() {
+	rootCmd.AddCommand(foldersCmd)
+}
