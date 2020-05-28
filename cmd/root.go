@@ -11,7 +11,6 @@ var cfgFile string
 
 var rootCmd = &cobra.Command{
 	Use: "texsep",
-
 	Long: `
 Separate your pdfs from your tex files
 	            ___           ___            ___           ___           ___
