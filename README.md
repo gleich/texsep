@@ -14,7 +14,7 @@
 
 # texsep
 
-![Go Build](https://github.com/Matt-Gleich/texsep/workflows/Go%20Build/badge.svg)
+![Go Build](https://github.com/Matt-Gleich/texsep/workflows/Go%20Build/badge.svg) ![Go Format](https://github.com/Matt-Gleich/texsep/workflows/Go%20Format/badge.svg)
 
 Separate your pdfs from your tex files
 
