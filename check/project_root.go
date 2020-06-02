@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/Matt-Gleich/texsep/status"
 	"github.com/Matt-Gleich/texsep/util"
 	"github.com/fatih/color"
 )
@@ -24,8 +25,7 @@ func ProjectRoot() {
 	}
 
 	if !util.Contains(fileNames, ".texsep.conf") {
-		color.Yellow("Project root not detected")
-		color.Yellow("Is this the project root? (y or n)")
+		status.Step("Project root not detected\nIs thi the project root? (y or n)")
 		reader := bufio.NewReader(os.Stdin)
 		input, _ := reader.ReadString('\n')
 		if input == "n\n" {
