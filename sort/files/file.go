@@ -3,7 +3,6 @@ package files
 import (
 	"os"
 	"path/filepath"
-	"strings"
 
 	"github.com/Matt-Gleich/texsep/status"
 )
@@ -18,13 +17,5 @@ func ListRecursively() []string {
 	if err != nil {
 		status.Error(err, "Failed to get all files")
 	}
-
-	cleanedFiles := []string{}
-	for _, dirtyFile := range files {
-		if strings.HasSuffix(dirtyFile, ".tex") || strings.HasSuffix(dirtyFile, ".pdf") {
-			cleanedFiles = append(cleanedFiles, dirtyFile)
-		}
-	}
-
-	return cleanedFiles
+	return files
 }
