@@ -18,6 +18,12 @@
 
 Separate your pdfs from your tex files
 
+## Install
+
+### MacOS/Linux
+
+`brew install Matt-Gleich/homebrew-taps/texsep`
+
 ## Structures
 
 ⚠️ All commands should be ran from the top of your LaTeX project ⚠️
