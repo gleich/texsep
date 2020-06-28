@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/Matt-Gleich/texsep/status"
+	"github.com/Matt-Gleich/statuser/v2"
 )
 
 // ListRecursively ... Get a list of all files in the current and all sub-directories
@@ -15,7 +15,7 @@ func ListRecursively() []string {
 		return nil
 	})
 	if err != nil {
-		status.Error(err, "Failed to get all files")
+		statuser.Error("Failed to get all files", err, 1)
 	}
 	return files
 }

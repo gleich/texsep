@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/Matt-Gleich/statuser/v2"
 	"github.com/Matt-Gleich/texsep/status"
 )
 
@@ -30,7 +31,7 @@ func MoveFiles(filePaths []string) {
 
 		err = os.Rename(filePath, fileFolderPath+fileName)
 		if err != nil {
-			status.Error(err, "Failed to move file")
+			statuser.Error("Failed to move file", err, 1)
 		}
 		status.Success("Moved " + filePath)
 	}
@@ -46,7 +47,7 @@ func Files() (filePaths []string) {
 		return nil
 	})
 	if err != nil {
-		status.Error(err, "Failed to get all files")
+		statuser.Error("Failed to get all tex and pdf files", err, 1)
 	}
 
 	for _, filePath := range allFiles {
