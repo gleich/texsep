@@ -26,7 +26,10 @@ func MoveFiles(filePaths []string) {
 
 		_, err := os.Stat(fileFolderPath)
 		if os.IsNotExist(err) {
-			os.MkdirAll(fileFolderPath, 0700)
+			err := os.MkdirAll(fileFolderPath, 0700)
+			if err != nil {
+				statuser.Error("Failed to make folders", err, 1)
+			}
 		}
 
 		err = os.Rename(filePath, fileFolderPath+fileName)
