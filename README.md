@@ -1,4 +1,4 @@
-```
+```txt
                     ___           ___            ___           ___           ___
                    /\__\         /|  |          /\__\         /\__\         /\  \
       ___         /:/ _/_       |:|  |         /:/ _/_       /:/ _/_       /::\  \
@@ -38,7 +38,7 @@ See `texsep mirror --help` for more information
 
 Structure before the command runs
 
-```
+```txt
 ├── Physics/
 │   ├── string-theory.tex
 │   ├── string-theory.pdf
@@ -65,7 +65,7 @@ Structure before the command runs
 
 Structure after the command runs
 
-```
+```txt
 ├── TeX/
 │   ├── random.tex
 │   ├── Physics/

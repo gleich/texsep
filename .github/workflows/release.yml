@@ -5,13 +5,13 @@ on:
     branches:
       - master
     tags:
-      - '\.'
+      - '*'
 
 jobs:
   goreleaser:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Set up Go
         uses: actions/setup-go@v2
