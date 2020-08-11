@@ -1,3 +1,5 @@
+<!-- DO NOT REMOVE - contributor_list:data:start:["Matt-Gleich"]:end -->
+
 ```txt
                     ___           ___            ___           ___           ___
                    /\__\         /|  |          /\__\         /\__\         /\  \
@@ -25,7 +27,7 @@ Separate your pdfs from your tex files
 
 ### MacOS/Linux
 
-`brew install Matt-Gleich/homebrew-taps/texsep`
+Simply run `brew tap Matt-Gleich/homebrew-taps` and then `brew install texsep`
 
 ## Structures
 
@@ -158,3 +160,11 @@ Structure after the command runs
 └── PDF/
     └── random.pdf
 ``` -->
+
+<!-- DO NOT REMOVE - contributor_list:start -->
+
+## 👥 Contributors
+
+- **[@Matt-Gleich](https://github.com/Matt-Gleich)**
+
+<!-- DO NOT REMOVE - contributor_list:end -->
