@@ -11,7 +11,7 @@ build-docker-dev-lint:
 build-go:
 	go get -v -t -d ./...
 	go build -v .
-	rm project_name
+	rm texsep
 
 #########
 # Linting
