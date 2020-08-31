@@ -1,8 +1,8 @@
-FROM golang:1.14.6-alpine3.12
+FROM golang:1.15-alpine3.12
 
 # Meta data:
-LABEL maintainer="project_author_email"
-LABEL description="project_description"
+LABEL maintainer="matthewgleich@gmail.com"
+LABEL description="Separate your pdfs from your tex files"
 
 # Copying over all the files:
 COPY . /usr/src/app
