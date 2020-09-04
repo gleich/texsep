@@ -61,7 +61,5 @@ func Files() (filePaths []string) {
 		}
 	}
 
-	status.Success("Successfully got all tex and pdf files")
-
 	return filePaths
 }
