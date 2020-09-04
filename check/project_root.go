@@ -1,9 +1,7 @@
 package check
 
 import (
-	"fmt"
 	"io/ioutil"
-	"log"
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/Matt-Gleich/statuser/v2"
@@ -11,7 +9,7 @@ import (
 	"github.com/Matt-Gleich/texsep/util"
 )
 
-// ProjectRoot ... Check if the current directory is the project root
+// Check if the current directory is the project root
 func ProjectRoot() {
 	files, err := ioutil.ReadDir("./")
 	if err != nil {
@@ -36,9 +34,9 @@ func ProjectRoot() {
 		if isRoot {
 			err := ioutil.WriteFile(".texsep.conf", []byte("DO NOT DELETE. USED FOR TEXSEP ROOT PROJECT DETECTION"), 0755)
 			if err != nil {
-				log.Fatal(err)
+				statuser.Error("Failed to create & write to .texsep.conf", err, 1)
 			}
-			fmt.Println("Created the .texsep.conf file for automatic project detection")
+			status.Success("Created the .texsep.conf file for automatic project detection")
 		} else {
 			statuser.ErrorMsg("Please make sure you are at the project root then run again", 1)
 		}

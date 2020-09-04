@@ -25,7 +25,7 @@ Separate your pdfs from your tex files
 	`,
 }
 
-// Execute ... Execute the main command
+// Execute the main command
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)

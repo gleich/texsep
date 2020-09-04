@@ -7,7 +7,7 @@ import (
 	"github.com/Matt-Gleich/statuser/v2"
 )
 
-// ListRecursively ... Get a list of all files in the current and all sub-directories
+//  Get a list of all files in the current and all sub-directories
 func ListRecursively() []string {
 	files := []string{}
 	err := filepath.Walk(".", func(path string, f os.FileInfo, err error) error {

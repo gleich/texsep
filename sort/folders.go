@@ -10,7 +10,7 @@ import (
 	"github.com/Matt-Gleich/texsep/status"
 )
 
-// MoveFiles ... Move the files
+// Move the files
 func MoveFiles(filePaths []string) {
 	if len(filePaths) != 0 {
 		fmt.Println()
@@ -43,9 +43,9 @@ func MoveFiles(filePaths []string) {
 
 }
 
-// Files ... Getting all the tex and pdf files for the project
+// Getting all the tex and pdf files for the project
 func Files() (filePaths []string) {
-	// Getting files in project recursively:
+	// Getting files in project recursively
 	allFiles := []string{}
 	err := filepath.Walk(".", func(path string, f os.FileInfo, err error) error {
 		allFiles = append(allFiles, path)

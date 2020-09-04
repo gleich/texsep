@@ -6,12 +6,12 @@ import (
 	"github.com/fatih/color"
 )
 
-// Step ... Output a step
+// Output a step
 func Step(message string) {
 	fmt.Println(message)
 }
 
-// Success ... Output a success
+// Output a success
 func Success(message string) {
 	color.Green(message)
 }
