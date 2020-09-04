@@ -12,7 +12,9 @@ import (
 
 // MoveFiles ... Move the files
 func MoveFiles(filePaths []string) {
-	fmt.Println("")
+	if len(filePaths) != 0 {
+		fmt.Println()
+	}
 	for _, filePath := range filePaths {
 		var prefix string
 		if strings.HasSuffix(filePath, ".tex") {

@@ -1,22 +1,21 @@
 package check
 
 import (
-	"bufio"
 	"fmt"
 	"io/ioutil"
 	"log"
-	"os"
 
+	"github.com/AlecAivazis/survey/v2"
+	"github.com/Matt-Gleich/statuser/v2"
 	"github.com/Matt-Gleich/texsep/status"
 	"github.com/Matt-Gleich/texsep/util"
-	"github.com/fatih/color"
 )
 
 // ProjectRoot ... Check if the current directory is the project root
 func ProjectRoot() {
 	files, err := ioutil.ReadDir("./")
 	if err != nil {
-		log.Fatal(err)
+		statuser.Error("Failed to read current directory", err, 1)
 	}
 
 	fileNames := []string{}
@@ -25,21 +24,25 @@ func ProjectRoot() {
 	}
 
 	if !util.Contains(fileNames, ".texsep.conf") {
-		status.Step("Project root not detected\nIs thi the project root? (y or n)")
-		reader := bufio.NewReader(os.Stdin)
-		input, _ := reader.ReadString('\n')
-		if input == "n\n" {
-			fmt.Println("Please make sure you are at the project root then run again")
-			os.Exit(0)
+		statuser.Warning("Project root not detected")
+		var isRoot bool
+		prompt := &survey.Confirm{
+			Message: "Are you currently in the root of your project?",
 		}
-		if input == "y\n" {
-			err := ioutil.WriteFile(".texsep.conf", []byte("DO NOT DELETE. USED FOR texsep ROOT PROJECT DETECTION"), 0755)
+		err := survey.AskOne(prompt, &isRoot)
+		if err != nil {
+			statuser.Error("Failed to ask if current directory is project root", err, 1)
+		}
+		if isRoot {
+			err := ioutil.WriteFile(".texsep.conf", []byte("DO NOT DELETE. USED FOR TEXSEP ROOT PROJECT DETECTION"), 0755)
 			if err != nil {
 				log.Fatal(err)
 			}
-			fmt.Println("Created .texsep file for automatic project detection")
+			fmt.Println("Created the .texsep.conf file for automatic project detection")
+		} else {
+			statuser.ErrorMsg("Please make sure you are at the project root then run again", 1)
 		}
 	} else {
-		color.Green("Project root detected automatically")
+		status.Success("Project root detected automatically")
 	}
 }
