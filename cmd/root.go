@@ -1,9 +1,7 @@
 package cmd
 
 import (
-	"fmt"
-	"os"
-
+	"github.com/Matt-Gleich/statuser/v2"
 	"github.com/spf13/cobra"
 )
 
@@ -28,7 +26,6 @@ Separate your pdfs from your tex files
 // Execute the main command
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		statuser.Error("Failed to execute root command", err, 1)
 	}
 }
