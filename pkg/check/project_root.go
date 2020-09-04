@@ -5,8 +5,8 @@ import (
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/Matt-Gleich/statuser/v2"
-	"github.com/Matt-Gleich/texsep/status"
-	"github.com/Matt-Gleich/texsep/util"
+	"github.com/Matt-Gleich/texsep/pkg/status"
+	"github.com/Matt-Gleich/texsep/pkg/util"
 )
 
 // Check if the current directory is the project root

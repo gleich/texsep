@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/Matt-Gleich/statuser/v2"
-	"github.com/Matt-Gleich/texsep/status"
+	"github.com/Matt-Gleich/texsep/pkg/status"
 )
 
 // Move the files

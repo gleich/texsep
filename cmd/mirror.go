@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"github.com/Matt-Gleich/texsep/check"
-	"github.com/Matt-Gleich/texsep/sort"
+	"github.com/Matt-Gleich/texsep/pkg/check"
+	"github.com/Matt-Gleich/texsep/pkg/sort"
 	"github.com/spf13/cobra"
 )
 
