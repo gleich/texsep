@@ -20,7 +20,7 @@ func MoveFiles(filePaths []string) {
 		if strings.HasSuffix(filePath, ".tex") {
 			prefix = "./LaTeX/"
 		} else if strings.HasSuffix(filePath, ".pdf") {
-			prefix = "./pdf/"
+			prefix = "./PDF/"
 		}
 		fileFolderPathChunks := strings.Split(filePath, "/")
 		fileFolderPath := prefix + strings.Join(fileFolderPathChunks[:len(fileFolderPathChunks)-1], "/") + "/"
