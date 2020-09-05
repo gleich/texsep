@@ -18,9 +18,15 @@ func MoveFiles(filePaths []string) {
 	for _, filePath := range filePaths {
 		var prefix string
 		if strings.HasSuffix(filePath, ".tex") {
-			prefix = "./LaTeX/"
+			latexPrefix := "./LaTeX/"
+			if !strings.HasPrefix(filePath, latexPrefix) {
+				prefix = latexPrefix
+			}
 		} else if strings.HasSuffix(filePath, ".pdf") {
-			prefix = "./PDF/"
+			pdfPrefix := "./PDF/"
+			if !strings.HasPrefix(filePath, pdfPrefix) {
+				prefix = pdfPrefix
+			}
 		}
 		fileFolderPathChunks := strings.Split(filePath, "/")
 		fileFolderPath := prefix + strings.Join(fileFolderPathChunks[:len(fileFolderPathChunks)-1], "/") + "/"
