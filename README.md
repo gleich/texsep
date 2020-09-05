@@ -69,7 +69,7 @@ Structure before the command runs
 Structure after the command runs
 
 ```txt
-├── TeX/
+├── LaTeX/
 │   ├── random.tex
 │   ├── Physics/
 │   │   ├── string-theory.tex
