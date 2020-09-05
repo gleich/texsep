@@ -1,7 +1,6 @@
 package sort
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -12,21 +11,20 @@ import (
 
 // Move the files
 func MoveFiles(filePaths []string) {
-	if len(filePaths) != 0 {
-		fmt.Println()
-	}
 	for _, filePath := range filePaths {
 		var prefix string
 		if strings.HasSuffix(filePath, ".tex") {
-			latexPrefix := "./LaTeX/"
-			if !strings.HasPrefix(filePath, latexPrefix) {
-				prefix = latexPrefix
+			latexPrefix := "LaTeX/"
+			if strings.HasPrefix(filePath, latexPrefix) {
+				continue
 			}
+			prefix = latexPrefix
 		} else if strings.HasSuffix(filePath, ".pdf") {
-			pdfPrefix := "./PDF/"
-			if !strings.HasPrefix(filePath, pdfPrefix) {
-				prefix = pdfPrefix
+			pdfPrefix := "PDF/"
+			if strings.HasPrefix(filePath, pdfPrefix) {
+				continue
 			}
+			prefix = pdfPrefix
 		}
 		fileFolderPathChunks := strings.Split(filePath, "/")
 		fileFolderPath := prefix + strings.Join(fileFolderPathChunks[:len(fileFolderPathChunks)-1], "/") + "/"
