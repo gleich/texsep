@@ -3,7 +3,7 @@ module github.com/Matt-Gleich/texsep
 go 1.15
 
 require (
-	github.com/AlecAivazis/survey/v2 v2.2.5
+	github.com/AlecAivazis/survey/v2 v2.2.7
 	github.com/Matt-Gleich/logoru v0.0.0-20200904210752-deb4c45dfe26
 	github.com/Matt-Gleich/statuser/v2 v2.4.0
 	github.com/fatih/color v1.10.0
