@@ -1,4 +1,4 @@
-<!-- DO NOT REMOVE - contributor_list:data:start:["Matt-Gleich", "dependabot-preview[bot]"]:end -->
+<!-- DO NOT REMOVE - contributor_list:data:start:["gleich", "dependabot-preview[bot]"]:end -->
 
 ```txt
                     ___           ___            ___           ___           ___
@@ -165,7 +165,7 @@ Structure after the command runs
 ## 👥 Contributors
 
 
-- **[@Matt-Gleich](https://github.com/Matt-Gleich)**
+- **[@gleich](https://github.com/gleich)**
 
 - **[@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)**
 
